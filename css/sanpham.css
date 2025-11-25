@@ -1,0 +1,128 @@
+/* ========== PRODUCTS PAGE SPECIFIC STYLES ========== */
+
+/* Page title styling */
+main > h1 {
+  text-align: center;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Product grid - 4 columns for products page */
+.grid--4 {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Product card specific enhancements */
+.card {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  min-height: 3em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card__text {
+  flex: 1;
+}
+
+/* Product badge styles */
+.product-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, var(--color-success) 0%, #38a169 100%);
+  color: var(--color-white);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+}
+
+.product-badge--sale {
+  background: linear-gradient(135deg, var(--color-error) 0%, #e53e3e 100%);
+  box-shadow: 0 4px 15px rgba(245, 101, 101, 0.4);
+}
+
+/* Stock status */
+.stock-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: var(--spacing-sm);
+}
+
+.stock-status--available {
+  background: rgba(72, 187, 120, 0.1);
+  color: var(--color-success);
+}
+
+.stock-status--low {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ff9800;
+}
+
+.stock-status--out {
+  background: rgba(245, 101, 101, 0.1);
+  color: var(--color-error);
+}
+
+/* Quick view button */
+.quick-view-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.card:hover .quick-view-btn {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  main > h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+  
+  main > h1 {
+    font-size: 1.75rem;
+  }
+  
+  .card {
+    min-height: auto;
+  }
+}

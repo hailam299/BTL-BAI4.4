@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OfficeHub - Cửa hàng bán thiết bị văn phòng trực tuyến chất lượng cao">
+    <title>OfficeHub - Thiết Bị Văn Phòng Chuyên Nghiệp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header__container">
+            <div class="header__logo">
+                <i class="fas fa-briefcase"></i> OfficeHub
+            </div>
+            <nav>
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link nav__link--active">Trang Chủ</a></li>
+                    <li><a href="danhmuc.html" class="nav__link">Danh Mục</a></li>
+                    <li><a href="sanpham.html" class="nav__link">Sản Phẩm</a></li>
+                    <li><a href="danhgia.html" class="nav__link">Đánh Giá</a></li>
+                    <li><a href="hotro.html" class="nav__link">Hỗ Trợ</a></li>
+                    <li><a href="lienhe.html" class="nav__link">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO SLIDER SECTION -->
+        <section class="hero-slider">
+            <div class="slider-container">
+                <!-- Radio inputs for CSS-only slider -->
+                <input type="radio" name="slider" id="slide1" class="slider-radio" checked>
+                <input type="radio" name="slider" id="slide2" class="slider-radio">
+                <input type="radio" name="slider" id="slide3" class="slider-radio">
+                
+                <div class="slide slide-1">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <h1 class="slide-title">Thiết Bị Văn Phòng Chất Lượng Cao</h1>
+                        <p class="slide-text">Tìm kiếm giải pháp văn phòng hoàn hảo cho doanh nghiệp của bạn</p>
+                        <a href="sanpham.html" class="btn btn--glass">Khám Phá Ngay</a>
+                    </div>
+                </div>
+                <div class="slide slide-2">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <h1 class="slide-title">Công Nghệ Hiện Đại</h1>
+                        <p class="slide-text">Máy móc thiết bị công nghệ cao phục vụ mọi nhu cầu làm việc</p>
+                        <a href="danhmuc.html" class="btn btn--glass">Xem Danh Mục</a>
+                    </div>
+                </div>
+                <div class="slide slide-3">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <h1 class="slide-title">Ưu Đãi Đặc Biệt</h1>
+                        <p class="slide-text">Giảm giá lên đến 30% cho khách hàng doanh nghiệp</p>
+                        <a href="lienhe.html" class="btn btn--glass">Liên Hệ Ngay</a>
+                    </div>
+                </div>
+                
+                <!-- Navigation Labels -->
+                <label for="slide1" class="slider-btn slider-btn-1"></label>
+                <label for="slide2" class="slider-btn slider-btn-2"></label>
+                <label for="slide3" class="slider-btn slider-btn-3"></label>
+                
+                <!-- Previous/Next Navigation -->
+                <div class="slider-nav">
+                    <label for="slide3" class="nav-btn nav-prev" data-slide="1">
+                        <i class="fas fa-chevron-left"></i>
+                    </label>
+                    <label for="slide1" class="nav-btn nav-prev" data-slide="2">
+                        <i class="fas fa-chevron-left"></i>
+                    </label>
+                    <label for="slide2" class="nav-btn nav-prev" data-slide="3">
+                        <i class="fas fa-chevron-left"></i>
+                    </label>
+                    
+                    <label for="slide2" class="nav-btn nav-next" data-slide="1">
+                        <i class="fas fa-chevron-right"></i>
+                    </label>
+                    <label for="slide3" class="nav-btn nav-next" data-slide="2">
+                        <i class="fas fa-chevron-right"></i>
+                    </label>
+                    <label for="slide1" class="nav-btn nav-next" data-slide="3">
+                        <i class="fas fa-chevron-right"></i>
+                    </label>
+                </div>
+                
+                <!-- Dots Indicator -->
+                <div class="slider-dots">
+                    <label for="slide1" class="dot"></label>
+                    <label for="slide2" class="dot"></label>
+                    <label for="slide3" class="dot"></label>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEARCH SECTION -->
+        <section class="search">
+            <div class="search__wrapper">
+                <input type="text" class="search__input" placeholder="Tìm kiếm sản phẩm...">
+                <button class="btn btn--primary search__button">
+                    <i class="fas fa-search"></i> Tìm
+                </button>
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Khách Hàng Tin Dùng</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="stat-number">1200+</div>
+                    <div class="stat-label">Sản Phẩm Chất Lượng</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Năm Kinh Nghiệm</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Độ Hài Lòng</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WAVE DIVIDER -->
+        <div class="wave-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+            </svg>
+        </div>
+
+        <!-- WHY CHOOSE US SECTION -->
+        <section class="features-section">
+            <h2 class="section__title">Tại Sao Chọn OfficeHub?</h2>
+            <p class="section__subtitle">Chúng tôi cam kết mang đến trải nghiệm tốt nhất</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Giao Hàng Nhanh</h3>
+                    <p>Giao hàng trong 24h tại Hà Nội. Miễn phí vận chuyển đơn >5 triệu</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Bảo Hành Chính Hãng</h3>
+                    <p>Bảo hành 1-3 năm, hỗ trợ đổi trả trong 7 ngày đầu nếu có lỗi từ nhà sản xuất</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Hỗ Trợ 24/7</h3>
+                    <p>Đội ngũ tư vấn chuyên nghiệp, nhiệt tình hỗ trợ khách hàng mọi lúc mọi nơi</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Giá Cả Cạnh Tranh</h3>
+                    <p>Cam kết giá tốt nhất thị trường, hoàn tiền 200% nếu tìm được giá rẻ hơn</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIES SECTION -->
+        <section class="categories-section">
+            <h2 class="section__title">Danh Mục Sản Phẩm</h2>
+            <p class="section__subtitle">Tất cả loại thiết bị văn phòng bạn cần</p>
+            <div class="grid grid--3">
+                <div class="card category-card">
+                    <div class="card__image">
+                        <img src="./img/may in.jpeg" alt="Máy In" loading="lazy">
+                        <div class="category-overlay">
+                            <span class="category-count">150+ sản phẩm</span>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Máy In</h3>
+                        <p class="card__text">Máy in laser, phun mực chất lượng cao từ HP, Canon, Brother</p>
+                        <a href="danhmuc.html" class="btn btn--primary btn--small">Xem Sản Phẩm</a>
+                    </div>
+                </div>
+
+                <div class="card category-card">
+                    <div class="card__image">
+                        <img src="./img/mayphoto.jpeg" alt="Máy Photocopy" loading="lazy">
+                        <div class="category-overlay">
+                            <span class="category-count">80+ sản phẩm</span>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Máy Photocopy</h3>
+                        <p class="card__text">Máy photocopy công nghiệp hiệu suất cao, đa chức năng</p>
+                        <a href="danhmuc.html" class="btn btn--primary btn--small">Xem Sản Phẩm</a>
+                    </div>
+                </div>
+
+                <div class="card category-card">
+                    <div class="card__image">
+                        <img src="./img/ghevp.jpeg" alt="Bàn Ghế Văn Phòng" loading="lazy">
+                        <div class="category-overlay">
+                            <span class="category-count">200+ sản phẩm</span>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Bàn Ghế Văn Phòng</h3>
+                        <p class="card__text">Bàn ghế ergonomic, ghế gaming, bàn điều chỉnh độ cao</p>
+                        <a href="danhmuc.html" class="btn btn--primary btn--small">Xem Sản Phẩm</a>
+                    </div>
+                </div>
+
+                <div class="card category-card">
+                    <div class="card__image">
+                        <img src="./img/maychieu.jpg" alt="Máy Chiếu" loading="lazy">
+                        <div class="category-overlay">
+                            <span class="category-count">60+ sản phẩm</span>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Máy Chiếu</h3>
+                        <p class="card__text">Máy chiếu 4K, Full HD cho phòng họp, hội trường hiện đại</p>
+                        <a href="danhmuc.html" class="btn btn--primary btn--small">Xem Sản Phẩm</a>
+                    </div>
+                </div>
+
+                <div class="card category-card">
+                    <div class="card__image">
+                        <img src="./img/vpp.jpg" alt="Văn Phòng Phẩm" loading="lazy">
+                        <div class="category-overlay">
+                            <span class="category-count">500+ sản phẩm</span>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Văn Phòng Phẩm</h3>
+                        <p class="card__text">Bút, giấy, kẹp, hồ dán - đầy đủ dụng cụ văn phòng</p>
+                        <a href="danhmuc.html" class="btn btn--primary btn--small">Xem Sản Phẩm</a>
+                    </div>
+                </div>
+
+                <div class="card category-card">
+                    <div class="card__image">
+                        <img src="./img/tbmang.jpeg" alt="Thiết Bị Mạng" loading="lazy">
+                        <div class="category-overlay">
+                            <span class="category-count">120+ sản phẩm</span>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Thiết Bị Mạng</h3>
+                        <p class="card__text">Router WiFi 6, Switch, Access Point chuyên nghiệp</p>
+                        <a href="danhmuc.html" class="btn btn--primary btn--small">Xem Sản Phẩm</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEST SELLERS SECTION -->
+        <section>
+            <h2 class="section__title">Sản Phẩm Nổi Bật</h2>
+            <p class="section__subtitle">Những sản phẩm bán chạy nhất</p>
+            <div class="grid grid--4">
+                <div class="card">
+                    <div class="card__image">
+                        <img src="./img/mayinHP.jpeg" alt="Máy In HP LaserJet">
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Máy In HP LaserJet Pro M404n</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i> (4.8)
+                        </div>
+                        <div class="card__price">2.500.000 ₫</div>
+                        <a href="sanpham.html" class="btn btn--accent btn--small">Chi Tiết</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image">
+                        <img src="./img/ghevp.jpeg" alt="Ghế Văn Phòng">
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Ghế Ergonomic Pro X1</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i> (5.0)
+                        </div>
+                        <div class="card__price">1.800.000 ₫</div>
+                        <a href="sanpham.html" class="btn btn--accent btn--small">Chi Tiết</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image">
+                        <img src="./img/banlamviec.jpeg" alt="Bàn Làm Việc">
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Bàn Làm Việc Premium 1.4m</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i> (4.7)
+                        </div>
+                        <div class="card__price">950.000 ₫</div>
+                        <a href="sanpham.html" class="btn btn--accent btn--small">Chi Tiết</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image">
+                        <img src="./img/maychieu.jpg" alt="Máy Chiếu">
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Máy Chiếu Sony VPL-VW290ES 4K</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i> (5.0)
+                        </div>
+                        <div class="card__price">15.000.000 ₫</div>
+                        <a href="sanpham.html" class="btn btn--accent btn--small">Chi Tiết</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image">
+                        <img src="./img/mayphoto.jpeg" alt="Máy Photocopy">
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Máy Photocopy Xerox VersaLink</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i> (4.6)
+                        </div>
+                        <div class="card__price">12.000.000 ₫</div>
+                        <a href="sanpham.html" class="btn btn--accent btn--small">Chi Tiết</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image">
+                        <img src="./img/vpp.jpg" alt="Văn Phòng Phẩm">
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Bộ Văn Phòng Phẩm Premium 50 Món</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i> (4.9)
+                        </div>
+                        <div class="card__price">350.000 ₫</div>
+                        <a href="sanpham.html" class="btn btn--accent btn--small">Chi Tiết</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image">
+                        <img src="./img/tbmang.jpeg" alt="Router WiFi">
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Router WiFi 6 TP-Link Archer AX73</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i> (4.5)
+                        </div>
+                        <div class="card__price">1.200.000 ₫</div>
+                        <a href="sanpham.html" class="btn btn--accent btn--small">Chi Tiết</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image">
+                        <img src="./img/tudo.jpeg" alt="Tủ Hồ Sơ">
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">Tủ Hồ Sơ Sắt 4 Tầng Cao Cấp</h3>
+                        <div class="card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i> (5.0)
+                        </div>
+                        <div class="card__price">2.200.000 ₫</div>
+                        <a href="sanpham.html" class="btn btn--accent btn--small">Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials-section">
+            <h2 class="section__title">Khách Hàng Nói Gì Về Chúng Tôi</h2>
+            <p class="section__subtitle">Những phản hồi chân thực từ khách hàng</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Sản phẩm chất lượng, giá cả hợp lý. Đội ngũ tư vấn nhiệt tình, giao hàng đúng hẹn. Tôi rất hài lòng khi mua sắm tại OfficeHub!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Nguyễn Văn An</div>
+                            <div class="author-title">CEO - Công ty ABC</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Mua máy in tại OfficeHub được tư vấn rất chi tiết. Sản phẩm chính hãng, bảo hành tốt. Sẽ giới thiệu cho bạn bè!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Trần Thị Bình</div>
+                            <div class="author-title">Giám Đốc - XYZ Corp</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Dịch vụ hoàn hảo! Mình đã mua cả bộ thiết bị văn phòng cho công ty. Giao hàng nhanh, lắp đặt tận nơi. Rất chuyên nghiệp!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Lê Văn Cương</div>
+                            <div class="author-title">Quản Lý - DEF Ltd</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUSTED BRANDS -->
+        <section class="brands-section">
+            <h3 class="brands-title">Đối Tác Tin Cậy</h3>
+            <div class="brands-marquee">
+                <div class="brands-track">
+                    <span class="brand-item">HP</span>
+                    <span class="brand-item">Canon</span>
+                    <span class="brand-item">Dell</span>
+                    <span class="brand-item">Logitech</span>
+                    <span class="brand-item">Microsoft</span>
+                    <span class="brand-item">Sony</span>
+                    <span class="brand-item">Xerox</span>
+                    <span class="brand-item">Brother</span>
+                    <span class="brand-item">HP</span>
+                    <span class="brand-item">Canon</span>
+                    <span class="brand-item">Dell</span>
+                    <span class="brand-item">Logitech</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOATING ACTION BUTTONS -->
+        <div class="floating-buttons">
+            <a href="tel:19001234" class="float-btn float-btn-phone" title="Gọi ngay">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="#" class="float-btn float-btn-messenger" title="Chat với chúng tôi">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+            <a href="#" class="float-btn float-btn-zalo" title="Chat Zalo">
+                <i class="fas fa-comment"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h4><i class="fas fa-info-circle"></i> Về OfficeHub</h4>
+                    <p>Cung cấp thiết bị văn phòng chất lượng cao, giá cạnh tranh cho các doanh nghiệp.</p>
+                </div>
+                <div class="footer__section">
+                    <h4><i class="fas fa-link"></i> Liên Kết</h4>
+                    <ul class="footer__links">
+                        <li><a href="danhmuc.html">Danh Mục Sản Phẩm</a></li>
+                        <li><a href="sanpham.html">Tất Cả Sản Phẩm</a></li>
+                        <li><a href="hotro.html">Hỗ Trợ Khách Hàng</a></li>
+                        <li><a href="lienhe.html">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4><i class="fas fa-phone"></i> Liên Hệ</h4>
+                    <p>
+                        Hotline: <strong>1900 1234</strong><br>
+                        Email: <strong>support@officehub.vn</strong><br>
+                        Giờ làm việc: 8:00 - 18:00
+                    </p>
+                </div>
+                <div class="footer__section">
+                    <h4><i class="fas fa-share-alt"></i> Theo Dõi</h4>
+                    <p>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer__divider"></div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 OfficeHub. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

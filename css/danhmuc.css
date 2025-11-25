@@ -1,0 +1,190 @@
+/* ========== CATEGORY PAGE SPECIFIC STYLES ========== */
+
+/* ========== PAGE HEADER ========== */
+.page-header {
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+  margin-bottom: var(--spacing-xl);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border-radius: 20px;
+}
+
+.page-header h1 {
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+/* ========== FILTER BAR ========== */
+.filter-bar {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+}
+
+.filter-item {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--color-white);
+  border: 2px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-item:hover {
+  background: rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.filter-item.active {
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-light) 100%);
+  color: var(--color-white);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  border-color: var(--color-orange);
+}
+
+/* ========== CATEGORY CARDS ========== */
+.category-card {
+  position: relative;
+}
+
+.card__badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-light) 100%);
+  color: var(--color-white);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.category-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+  padding: var(--spacing-md);
+  z-index: 1;
+}
+
+.category-count {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.category-features span {
+  font-size: 0.9rem;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-features i {
+  color: var(--color-orange);
+  font-size: 0.8rem;
+}
+
+/* ========== CTA SECTION ========== */
+.cta-section {
+  margin: var(--spacing-2xl) 0;
+  padding: var(--spacing-2xl);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+  font-size: 2rem;
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 768px) {
+  .filter-bar {
+    padding: var(--spacing-md);
+    border-radius: 20px;
+  }
+  
+  .filter-item {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-bar {
+    gap: var(--spacing-xs);
+  }
+  
+  .page-header {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-content p {
+    font-size: 1rem;
+  }
+}

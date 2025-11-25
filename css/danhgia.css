@@ -1,0 +1,209 @@
+/* ========== REVIEWS PAGE SPECIFIC STYLES ========== */
+
+/* Page title styling */
+main > h1 {
+  text-align: center;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Review articles container */
+main > div[style*="max-width"] {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Enhanced article/review cards */
+article {
+  background: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: 15px;
+  margin-bottom: var(--spacing-xl);
+  border-left: 4px solid var(--color-primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+article::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+}
+
+article:hover::before {
+  width: 8px;
+}
+
+article h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+/* Review meta information */
+.article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+  font-size: 0.95rem;
+}
+
+.article__meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4a5568;
+}
+
+.article__meta i {
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+.article__author {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.article__date {
+  color: #718096;
+}
+
+/* Star ratings in meta */
+.article__meta span:has(.fa-star) {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.article__meta .fa-star,
+.article__meta .fa-star-half-alt {
+  color: #fbbf24;
+}
+
+/* Review content */
+article p {
+  color: #4a5568;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Verified purchase badge */
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(72, 187, 120, 0.1);
+  color: var(--color-success);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: var(--spacing-sm);
+}
+
+.verified-badge i {
+  font-size: 0.9rem;
+}
+
+/* Review filter buttons */
+.review-filters {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-btn:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main > h1 {
+    font-size: 2rem;
+  }
+  
+  article {
+    padding: var(--spacing-lg);
+  }
+  
+  article h3 {
+    font-size: 1.25rem;
+  }
+  
+  .article__meta {
+    gap: var(--spacing-md);
+    font-size: 0.9rem;
+  }
+  
+  .review-filters {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  main > h1 {
+    font-size: 1.75rem;
+  }
+  
+  .article__meta {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .filter-btn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 0.9rem;
+  }
+}

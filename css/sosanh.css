@@ -1,0 +1,306 @@
+/* ========== COMPARISON PAGE SPECIFIC STYLES ========== */
+
+/* Page title styling */
+main > h1 {
+  text-align: center;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+section h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.75rem;
+  padding-bottom: var(--spacing-md);
+  border-bottom: 3px solid var(--color-primary);
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background: var(--gradient-accent);
+}
+
+/* Enhanced comparison table */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: var(--spacing-2xl);
+  background-color: var(--color-white);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+thead {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
+
+thead tr th {
+  padding: var(--spacing-xl);
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+thead tr th:last-child {
+  border-right: none;
+}
+
+thead tr th:first-child {
+  border-top-left-radius: 15px;
+}
+
+thead tr th:last-child {
+  border-top-right-radius: 15px;
+}
+
+tbody tr {
+  transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(255, 140, 97, 0.08) 100%);
+  transform: scale(1.01);
+}
+
+tbody tr td {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+  border-right: 1px solid rgba(226, 232, 240, 0.5);
+  transition: all 0.3s ease;
+}
+
+tbody tr td:last-child {
+  border-right: none;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 15px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+}
+
+/* First column (labels) styling */
+tbody tr td:first-child {
+  font-weight: 700;
+  color: var(--color-primary);
+  background: rgba(102, 126, 234, 0.03);
+}
+
+tbody tr:hover td:first-child {
+  color: var(--color-orange);
+  background: rgba(255, 107, 53, 0.08);
+}
+
+/* Value cells */
+tbody tr td:not(:first-child) {
+  color: #4a5568;
+  text-align: center;
+}
+
+/* Highlight best values */
+.highlight {
+  background: rgba(72, 187, 120, 0.1);
+  color: var(--color-success);
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Price row special styling */
+tbody tr:has(td:first-child:contains("Giá")) td {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-orange);
+}
+
+/* Comparison summary cards */
+.comparison-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin: var(--spacing-2xl) 0;
+}
+
+.summary-card {
+  background: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.summary-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-orange);
+  box-shadow: 0 8px 30px rgba(255, 107, 53, 0.2);
+}
+
+.summary-card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+.summary-card .price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-orange);
+  margin: var(--spacing-md) 0;
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.summary-card ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0;
+  text-align: left;
+}
+
+.summary-card ul li {
+  padding: var(--spacing-xs) 0;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.summary-card ul li i {
+  color: var(--color-success);
+  font-size: 0.9rem;
+}
+
+/* Winner badge */
+.winner-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: var(--color-white);
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Comparison notes */
+.comparison-notes {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  padding: var(--spacing-xl);
+  border-radius: 15px;
+  margin-top: var(--spacing-2xl);
+  border-left: 4px solid var(--color-primary);
+}
+
+.comparison-notes h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.comparison-notes h3 i {
+  color: var(--color-orange);
+  font-size: 1.3rem;
+}
+
+.comparison-notes ul {
+  color: #4a5568;
+  line-height: 1.8;
+  padding-left: var(--spacing-xl);
+}
+
+.comparison-notes ul li {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Responsive table wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0 -var(--spacing-lg);
+  padding: 0 var(--spacing-lg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main > h1 {
+    font-size: 2rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+  
+  table {
+    font-size: 0.9rem;
+  }
+  
+  thead tr th,
+  tbody tr td {
+    padding: var(--spacing-md);
+  }
+  
+  .comparison-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .table-wrapper {
+    margin: 0 -var(--spacing-md);
+    padding: 0 var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  main > h1 {
+    font-size: 1.75rem;
+  }
+  
+  section h2 {
+    font-size: 1.3rem;
+  }
+  
+  table {
+    font-size: 0.85rem;
+  }
+  
+  thead tr th,
+  tbody tr td {
+    padding: var(--spacing-sm);
+  }
+  
+  .summary-card .price {
+    font-size: 1.5rem;
+  }
+  
+  .comparison-notes {
+    padding: var(--spacing-lg);
+  }
+}
